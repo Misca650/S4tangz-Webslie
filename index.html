@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S4tangz | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="topbar">
+        <h3 class="s4tangz-text" >S4tangz</h3>
+        <h3 class="s4tangzwebslie-text">Webslie</h3>
+        <h3 class="s4tangz-text" > </h3>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+
+        <a href="#" class="right">Login</a>
+    </div>
+
+    <div class="text-container">
+        <h3 class="text-1" >Experience the Best</h3>
+        <h3 class="random-text">Webslie</h3>
+        <h3 class="text-1" >Function ... </h3>
+        
+    </div>
+
+    <div class="main-container">
+
+        <div class="glow-light">
+          </div>
+
+        <div class="text-container">
+            <h3 class="text-1" >What Your Message to Owner </h3>
+            <h3 class="no-text">Webslie</h3>
+        </div>
+
+        <div class="window-mock" >
+            <input type="text" class="text-message" placeholder="What Your Message?">
+
+           <button type="submit" class="submit-message" >Submit Your Message</button> 
+           <button type="reset" class="reset-message" >Reset Your Message</button> 
+
+          </div>
+
+    </div>
+    
+</body>
+
+<script>
+    const list = ["Hello!", "Welcome!", "Random Text!", "✨ Sparkle!"];
+    const element = document.querySelector(".random-text");
+
+    element.style.transition = "opacity 0.5s ease";
+
+    setInterval(() => {
+    element.style.opacity = 0;
+
+    setTimeout(() => {
+        element.innerText = list[Math.floor(Math.random() * list.length)];
+        element.style.opacity = 1;
+    }, 400);
+}, 3000);
+</script>
+
+</html>

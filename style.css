@@ -21,7 +21,8 @@ body {
 }
 
 .window-mock {
-    flex-direction: column;
+    display: flex;
+    gap: 20px;   
     border-radius: 8px;
     color: white;
     padding: 10px;
@@ -59,7 +60,11 @@ body {
     filter: blur(30px);
 }
 
-/* text[1] */
+.button-area {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
 .text-message {
     margin: 10px 0;
@@ -67,6 +72,7 @@ body {
     border: none;
     border-radius: 8px;
     font-size: 16px;
+    resize: none;
     background-color: rgba(0, 0, 0, 0.185);
     box-shadow: rgba(34, 42, 53, 0.06) 0px 0px 24px, rgba(0, 0, 0, 0.05) 0px 1px 1px, rgba(34, 42, 53, 0.04) 0px 0px 0px 1px, rgba(34, 42, 53, 0.08) 0px 0px 4px, rgba(47, 48, 55, 0.05) 0px 16px 68px, rgba(255, 255, 255, 0.1) 0px 1px 0px inset;
     color: white;
@@ -80,7 +86,7 @@ body {
 
 .submit-message {
     margin: 10px 0;
-    padding: 20px 50px;
+    padding: 40px 50px;
     border: none;
     border-radius: 8px;
     font-size: 16px;
@@ -92,7 +98,7 @@ body {
 
 .reset-message {
     margin: 10px 0;
-    padding: 20px 50px;
+    padding: 40px 50px;
     border: none;
     border-radius: 8px;
     font-size: 16px;
@@ -172,6 +178,87 @@ body {
     font-size: 40px;
     font-family: 'Poppins', sans-serif;
     filter: drop-shadow(0 0 10px rgba(255, 204, 0,  0.5));
+}
+
+ /* Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Box */
+.modal {
+    background-color: white;
+    border-radius: 10px;
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+
+.modal .icon {
+    font-size: 40px;
+    color: #5a7f97;
+    border: 2px solid #5a7f97;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 10px;
+}
+
+.modal h2 {
+    margin-bottom: 10px;
+}
+
+.modal p {
+    font-size: 14px;
+    color: #333;
+}
+
+.modal .highlight {
+    color: red;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.modal .buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.modal button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.confirm-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.cancel-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.show {
+    display: flex;
 }
 
 /* a.topbar[1] */
